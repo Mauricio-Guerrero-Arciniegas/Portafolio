@@ -1,0 +1,407 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+html{
+    font-family: 'Inter';
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter';
+    background-color: #1f1d2c;
+    
+    min-width: 250px;
+}
+
+.navbar {
+    background-color: rgba(36, 38, 53, .2 );
+    justify-content: space-between;
+    margin-left: 550px;
+    padding: 20px;
+    width: 800px;
+    height: 40px;
+    z-index: 20;
+}
+
+.navbar> ul > li{
+    list-style: none;
+    display: inline-block;
+    margin-left: 2rem;
+    font-weight: 400;
+    font-size: 13px;
+}
+
+.navbar > ul > li > a{
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px;
+}
+
+.navbar > ul > li > a:hover{
+    color: #f1a600;
+}
+
+.cuadro1 {
+    background-color: rgba(67, 70, 90, 0.2);
+    z-index: 10;
+    width: 630px;
+    grid-column: 10/15;
+    grid-row: 1/6;
+}
+
+.cuadro1 .nombre {
+    font-size: 7rem;
+    left: 3rem;
+}
+
+.container{
+    width: 100%;
+    height: 2000px;
+    
+    grid-auto-flow: column;
+    align-items: stretch;
+    grid-template-columns: repeat(12, 83.3px);
+    grid-template-rows: repeat(12, auto);
+}
+
+.nombre {
+    font-size: 60px;
+    grid-column: 2/9;
+    grid-row: 2/3;
+    color: white;
+    height: 40px;
+    width: auto;
+    padding: 0px;
+    align-items: stretch;
+    z-index: 23;
+}
+
+.lorem1 {
+    font-size: 30px;
+    align-items:stretch;
+    height: auto;
+    width: auto;
+    grid-column: 2/9;
+    grid-row: 3/4;
+    color: white;
+    padding: 0px;
+    z-index: 23;
+}
+
+.color5 {
+    color:#f1a600;
+}
+
+.iconos{
+    grid-column: 2/5;
+    grid-row: 4/5;
+    align-items: stretch;
+    display: inline;
+}
+
+.cuadro2 {
+    display: inline-block;
+    display: grid;
+    background-color: rgba(67, 70, 90, 0.2);
+    color: white;
+    grid-column: 1/15;
+    grid-row: 9/11;
+    grid-template-columns: repeat(3, 1fr); 
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas: "acerca acerca acerca"
+                         "p p p"
+                         "logo1 logo1 logo2";
+}
+
+.cuadro2 > .acerca {
+    font-size: 40px;
+    text-align: center;
+    grid-column: 1/4;
+    grid-row: 1/2;
+}
+
+.cuadro2 > p {
+    font-size: 20px;
+    text-align: center;
+    margin-top: 2rem;
+    grid-column: 1/4;
+    grid-row: 2/3;
+}
+
+.cuadro2 > .logo1 {
+    display: grid;
+    grid-column: 1/2;
+    grid-row: 3/4;
+    text-align: center;
+    justify-content: right;
+}
+
+.cuadro2  .logo2 {
+    margin-top: -35px;
+    display: grid;
+    grid-column: 3/4;
+    grid-row: 3/4;
+    text-align: center;
+    justify-content: left; 
+}
+
+.experiencia {
+    background-color: #1f1d2c;
+    display: grid;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    grid-row-gap: 20px;
+    grid-column: 5/11;
+    grid-row: 12/17;
+    grid-template-areas: "experiencia experiencia experiencia experiencia"
+                         "dos tres cuatro once"
+                         "cinco seis siete once"
+                         "ocho nueve diez once";
+}
+
+.experiencia .uno,
+.experiencia .dos,
+.experiencia .tres,
+.experiencia .cuatro,
+.experiencia .cinco,
+.experiencia .seis,
+.experiencia .siete,
+.experiencia .ocho,
+.experiencia .nueve,
+.experiencia .diez,
+.experiencia .once {
+    position: relative;
+}
+
+.experiencia .uno {
+    background-color: #1f1d2c;
+    color: white;
+    font-size: 40px;
+    grid-area: experiencia;
+    left: 6rem;
+}
+
+.experiencia .dos {
+    right: 4rem;
+    grid-area: dos;
+    z-index: 22;
+}
+
+.experiencia .tres {
+    background-color: #1f1d2c;
+    color: white;
+    grid-area: tres;
+    right: 3rem;
+}
+
+.experiencia .cuatro {
+    background-color: #1f1d2c;
+    color: white;
+    grid-area: cuatro;
+}
+
+.experiencia .cinco {
+    background-color: #1f1d2c;
+    right: 4rem;
+    grid-area: cinco;
+}
+
+.experiencia .seis {
+    background-color: #1f1d2c;
+    color: white;
+    grid-area: seis;
+    right: 3rem;
+}
+
+.experiencia .siete {
+    background-color: #1f1d2c;
+    grid-area: siete;
+    color: white;
+}
+
+.experiencia .ocho {
+    background-color: #1f1d2c;
+    right: 4rem;
+    grid-area: ocho;
+}
+
+.experiencia .nueve {
+    background-color: #1f1d2c;
+    color: white;
+    grid-area: nueve;
+    right: 3rem;
+}
+
+.experiencia .diez {
+    background-color: #1f1d2c;
+    color: white;
+    grid-area: diez;
+}
+
+.experiencia .once {
+    background-color: #1f1d2c;
+    color: white;
+    grid-area: once;
+    align-items: center;
+    left: 9rem;
+}
+
+.mis_habilidades {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    font-size: 40px;
+    margin-bottom: 2rem;
+}
+
+.flex-container {
+    display: flex;
+    color: white;
+    width: 100%;
+}
+
+.habilidades1 > .mis_habilidades {
+    left: 20px;
+}
+
+.habilidades1 {
+    background-color: rgba(67, 70, 90, 0.2);
+    color: #f1a600;
+    font-family: 'Inter';
+    font-weight: bold;
+    font-size: 50px;
+    text-align: right;
+    flex-grow: 1; 
+}
+
+.habilidades2 {
+    display: flexbox;
+    color: white;
+    font-family: 'Inter';
+    font-weight: bold;
+    font-size: 25px;
+    text-align: left; 
+    flex-grow: 2; 
+}
+
+.mi_portafolio > h2 {
+    text-align: center;
+    color: white;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    font-size: 40px;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 500px);
+    gap: 100px;
+    color: white;
+    width: 100%;
+    height: auto;
+}
+
+.portafolio1 {
+    background-color:#f1a600;
+    width: 550px;
+    height: 380px;
+    color: white;
+    margin-left: 140px;
+    grid-column: 1 / 2;
+    grid-row: 1;
+}
+
+.portafolio1 > p {
+    font-size: 1.8rem;
+}
+
+.portafolio1 > img {
+    margin-left: 15px;
+    margin-top: 15px;
+}
+
+.portafolio2 {
+    color: white;
+    background-color: rgba(67, 70, 90, 0.2);
+    width: 550px;
+    height: 380px;
+    margin-left: 100px;
+    grid-column: 2 / 3;
+    grid-row: 2;
+}
+
+.portafolio2 > p {
+    font-size: 1.8rem;
+}
+
+.portafolio2 > img {
+    margin-left: 15px;
+    margin-top: 15px;
+}
+
+.portafolio3 {
+    color: white;
+    width: 550px;
+    height: 380px;
+    background-color: #f1a600;
+    grid-column: 1 / 2;
+    grid-row: 3;
+    margin-left: 140px;
+}
+
+.portafolio3 > p {
+    font-size: 1.8rem;
+}
+
+.portafolio3 > img {
+    margin-left: 15px;
+    margin-top: 15px;
+}
+
+.contacto {
+    margin-top: 20px;
+}
+
+.cuadro3 {
+    display: grid;
+    background-color: rgba(67, 70, 90, 0.2);
+    color: white;
+    text-align: center;
+    margin-top: 6rem;
+    grid-template-columns: repeat(4, 1fr); 
+    grid-template-rows: repeat(3, 100px);
+    grid-template-areas: ". contacto contacto ."
+                         "phone mail"
+                         "phone mail";
+}
+
+.cuadro3 > h2 {
+    grid-column: 2/4;
+    grid-row: 1/2;
+    font-size: 40px;
+    
+}
+
+.cuadro3 > .phone {
+    grid-column: 2/3;
+    grid-row: 2/4;
+}
+
+.cuadro3 > .mail {
+    grid-column: 3/4;
+    grid-row: 2/4;
+}
+
+.academlo > p {
+    text-align: center;
+    color: white;
+    padding: 4rem;
+}
