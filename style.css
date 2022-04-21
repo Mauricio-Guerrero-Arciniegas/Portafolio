@@ -8,89 +8,59 @@ html{
 *{
     padding: 0;
     margin: 0;
-    box-sizing: border-box;
 }
 
 body {
     font-family: 'Inter';
     background-color: #1f1d2c;
-    display: grid;
-    min-width: 250px;
+    position: relative;
 }
 
-.navbar {
-    background-color: rgba(36, 38, 53, .2 );
-    justify-content: space-between;
-    margin-left: 550px;
-    padding: 20px;
-    width: 800px;
-    height: 40px;
+header nav {
     z-index: 20;
+    min-height: 40px;
+    text-align: right;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
 }
 
-.navbar> ul > li{
-    list-style: none;
-    display: inline-block;
-    margin-left: 2rem;
-    font-weight: 400;
-    font-size: 13px;
-}
-
-.navbar > ul > li > a{
+header li{
+    display: inline;
     color: #ffffff;
     text-decoration: none;
-    padding: 10px;
+    padding: 1.5rem;
+    font-size: 12px;
 }
 
-.navbar > ul > li > a:hover{
+header a:hover{
     color: #f1a600;
 }
 
+.container .navbar {
+    width: 90%;
+}
+
 .cuadro1 {
-    background-color: rgba(67, 70, 90, 0.2);
-    z-index: 10;
-    width: 630px;
-    grid-column: 10/15;
-    grid-row: 1/6;
+    display: flex;
+    background-color: rgba(203, 205, 218, 0.2);
+    z-index: 11;
+    width: 460px;
+    min-height: 500px;
+    float: right;
 }
 
-.cuadro1 .nombre {
-    font-size: 7rem;
-    left: 3rem;
-}
-
-.container{
-    width: 100%;
-    height: 2000px;
-    display: grid;
-    grid-auto-flow: column;
-    align-items: stretch;
-    grid-template-columns: repeat(12, 83.3px);
-    grid-template-rows: repeat(12, auto);
-}
-
-.nombre {
-    font-size: 60px;
-    grid-column: 2/9;
-    grid-row: 2/3;
+#nombre h2 {
+    font-size: 70px;
     color: white;
-    height: 40px;
-    width: auto;
-    padding: 0px;
-    align-items: stretch;
     z-index: 23;
+    margin-top: 6rem; 
 }
 
-.lorem1 {
+.ing > h5 {
     font-size: 30px;
-    align-items:stretch;
-    height: auto;
-    width: auto;
-    grid-column: 2/9;
-    grid-row: 3/4;
+    left: 10px;
     color: white;
-    padding: 0px;
-    z-index: 23;
 }
 
 .color5 {
@@ -98,19 +68,16 @@ body {
 }
 
 .iconos{
-    grid-column: 2/5;
-    grid-row: 4/5;
     align-items: stretch;
     display: inline;
 }
 
 .cuadro2 {
-    display: inline-block;
     display: grid;
+    margin-top: 6rem;
     background-color: rgba(67, 70, 90, 0.2);
     color: white;
-    grid-column: 1/15;
-    grid-row: 9/11;
+
     grid-template-columns: repeat(3, 1fr); 
     grid-template-rows: repeat(3, auto);
     grid-template-areas: "acerca acerca acerca"
@@ -119,6 +86,7 @@ body {
 }
 
 .cuadro2 > .acerca {
+    width: 100%;
     font-size: 40px;
     text-align: center;
     grid-column: 1/4;
@@ -152,23 +120,23 @@ body {
 
 .experiencia {
     background-color: #1f1d2c;
+    margin-top: 6rem;
+    margin-bottom: 6rem;
     display: grid;
     justify-content: center;
     text-align: center;
     align-items: center;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     grid-row-gap: 20px;
-    grid-column: 5/11;
-    grid-row: 12/17;
     grid-template-areas: "experiencia experiencia experiencia experiencia"
                          "dos tres cuatro once"
                          "cinco seis siete once"
                          "ocho nueve diez once";
 }
 
-.experiencia .uno,
 .experiencia .dos,
 .experiencia .tres,
+.experiencia .uno,
 .experiencia .cuatro,
 .experiencia .cinco,
 .experiencia .seis,
@@ -185,11 +153,10 @@ body {
     color: white;
     font-size: 40px;
     grid-area: experiencia;
-    left: 6rem;
 }
 
 .experiencia .dos {
-    right: 4rem;
+    align-items: center;
     grid-area: dos;
     z-index: 22;
 }
@@ -198,7 +165,7 @@ body {
     background-color: #1f1d2c;
     color: white;
     grid-area: tres;
-    right: 3rem;
+    
 }
 
 .experiencia .cuatro {
@@ -209,7 +176,7 @@ body {
 
 .experiencia .cinco {
     background-color: #1f1d2c;
-    right: 4rem;
+    
     grid-area: cinco;
 }
 
@@ -217,7 +184,6 @@ body {
     background-color: #1f1d2c;
     color: white;
     grid-area: seis;
-    right: 3rem;
 }
 
 .experiencia .siete {
@@ -228,7 +194,7 @@ body {
 
 .experiencia .ocho {
     background-color: #1f1d2c;
-    right: 4rem;
+    
     grid-area: ocho;
 }
 
@@ -236,7 +202,6 @@ body {
     background-color: #1f1d2c;
     color: white;
     grid-area: nueve;
-    right: 3rem;
 }
 
 .experiencia .diez {
@@ -250,7 +215,6 @@ body {
     color: white;
     grid-area: once;
     align-items: center;
-    left: 9rem;
 }
 
 .mis_habilidades {
@@ -259,111 +223,176 @@ body {
     text-align: center;
     color: white;
     font-size: 40px;
-    margin-bottom: 2rem;
-}
-
-.flex-container {
-    display: flex;
-    color: white;
-    width: 100%;
-}
-
-.habilidades1 > .mis_habilidades {
-    left: 20px;
 }
 
 .habilidades1 {
-    background-color: rgba(67, 70, 90, 0.2);
+    display: grid;
+    color: white;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-areas: "cuadro_habilidades mis_habilidades ."
+                         "uno cinco cinco"
+                         "dos seis seis"
+                         "tres siete siete"
+                         "cuatro ocho ocho";
+}
+
+.habilidades1 .mis_habilidades,
+.habilidades1 .uno,
+.habilidades1 .dos,
+.habilidades1 .tres,
+.habilidades1 .cuatro,
+.habilidades1 .cinco,
+.habilidades1 .seis,
+.habilidades1 .siete,
+.habilidades1 .ocho {
+    position: relative;
+}
+
+.habilidades1 > .mis_habilidades {
+    left: 30px;
+}
+
+.habilidades1 {
     color: #f1a600;
     font-family: 'Inter';
-    font-weight: bold;
-    font-size: 50px;
+    font-size: 3rem;
     text-align: right;
-    flex-grow: 1; 
 }
 
 .habilidades2 {
-    display: flexbox;
     color: white;
     font-family: 'Inter';
     font-weight: bold;
-    font-size: 25px;
-    text-align: left; 
-    flex-grow: 2; 
 }
 
-.mi_portafolio > h2 {
-    text-align: center;
+.habilidades1 .mis_habilidades {
+    grid-area: mis_habilidades;
+}
+
+.habilidades1 .uno {
+    grid-area: uno;
+    background-color: #242635;
+    margin-right: 1rem;
+}
+
+.habilidades1 .dos {
+    grid-area: dos;
+    background-color: #242635;
+    margin-right: 1rem;
+}
+
+.habilidades1 .tres {
+    grid-area: tres;
+    background-color: #242635;
+    margin-right: 1rem;
+}
+
+.habilidades1 .cuatro {
+    grid-area: cuatro;
+    background-color: #242635;
+    margin-right: 1rem;
+}
+
+.habilidades1 .cinco {
+    grid-area: cinco;
+    text-align: left;
     color: white;
-    margin-top: 3rem;
-    margin-bottom: 3rem;
+    
+}
+
+.habilidades1 .seis {
+    grid-area: seis;
+    text-align: left;
+    color: white;
+    
+}
+
+.habilidades1 .siete {
+    grid-area: siete;
+    text-align: left;
+    color: white;
+    
+}
+
+.habilidades1 .ocho {
+    grid-area: ocho;
+    text-align: left;
+    color: white;
+    
+}
+
+.miportafolio h2 {
     font-size: 40px;
+    margin-top: 6rem;
+    margin-bottom: 6rem;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #ffffff;
 }
 
-.wrapper {
-    display: grid;
-    grid-template-columns: repeat(2, 500px);
-    gap: 100px;
-    color: white;
-    width: 100%;
-    height: auto;
-}
-
-.portafolio1 {
-    background-color:#f1a600;
-    width: 550px;
-    height: 380px;
-    color: white;
-    margin-left: 140px;
-    grid-column: 1 / 2;
-    grid-row: 1;
-}
-
-.portafolio1 > p {
-    font-size: 1.8rem;
-}
-
-.portafolio1 > img {
-    margin-left: 15px;
-    margin-top: 15px;
-}
-
-.portafolio2 {
-    color: white;
-    background-color: rgba(67, 70, 90, 0.2);
-    width: 550px;
-    height: 380px;
-    margin-left: 100px;
-    grid-column: 2 / 3;
-    grid-row: 2;
-}
-
-.portafolio2 > p {
-    font-size: 1.8rem;
-}
-
-.portafolio2 > img {
-    margin-left: 15px;
-    margin-top: 15px;
-}
-
-.portafolio3 {
-    color: white;
-    width: 550px;
-    height: 380px;
+.back1{
     background-color: #f1a600;
-    grid-column: 1 / 2;
-    grid-row: 3;
-    margin-left: 140px;
+    width: 380px;
+    height: 350px;
+    margin-left: 6rem;
 }
 
-.portafolio3 > p {
-    font-size: 1.8rem;
+.back1 > img{
+    width: 350px;
+    height: 350px;
+    margin-top: 1rem;
+    margin-left: 1rem;
 }
 
-.portafolio3 > img {
-    margin-left: 15px;
-    margin-top: 15px;
+.back1 h3 {
+    color: white;
+    margin-top: 2rem;
+}
+
+.back2{
+    background-color:#242635;
+    width: 380px;
+    height: 350px;
+    align-items: flex-end;
+    position: relative;
+    display: inline-block;
+}
+
+.back2 > img{
+    width: 350px;
+    height: 350px;
+    margin-top: 1rem;
+    margin-left: 1rem;
+}
+
+.back2 h3 {
+    color: white;
+    margin-top: 2rem;
+}
+
+.back3{
+    background-color: #f1a600;
+    width: 380px;
+    height: 350px;
+    margin-left: 6rem;
+  
+}
+
+.back3 > img{
+    width: 350px;
+    height: 350px;
+    margin-top: 1rem;
+    margin-left: 1rem;
+}
+
+.back3 h3 {
+    color: white;
+    margin-top: 2rem;
 }
 
 .contacto {
@@ -374,6 +403,7 @@ body {
     display: grid;
     background-color: rgba(67, 70, 90, 0.2);
     color: white;
+    width: 100%;
     text-align: center;
     margin-top: 6rem;
     grid-template-columns: repeat(4, 1fr); 
@@ -387,7 +417,6 @@ body {
     grid-column: 2/4;
     grid-row: 1/2;
     font-size: 40px;
-    
 }
 
 .cuadro3 > .phone {
@@ -402,6 +431,8 @@ body {
 
 .academlo > p {
     text-align: center;
+    justify-content: center;
+    align-items: center;
     color: white;
     padding: 4rem;
 }
