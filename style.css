@@ -57,7 +57,7 @@ header label:hover {
 .menu li {
     text-align: left;
     flex-grow: 1;
-    margin-left: 3rem;
+    margin-left: 1rem;
 }
 
 .menu li a {
@@ -112,7 +112,7 @@ header label:hover {
 }
 
 .cuadro1 img {
-    margin-left: 7.5rem;
+    margin-left: 6.5rem;
     margin-top: 3rem;
 }
 
