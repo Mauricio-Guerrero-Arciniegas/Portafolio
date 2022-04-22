@@ -19,14 +19,14 @@ body {
 
 
 header {
-    width: 100%;
+    width: 80%;
     background: #1f1d2c;
 
 }
 
 #btn-menu {
     display: none;
-    
+    color: white;
 }
 
 header label {
@@ -42,28 +42,33 @@ header label:hover {
     background: rgba(0,0,0,0.3);
 }
 
+.menu nav{
+    justify-content: end;
+}
+
 .menu ul {
     margin: 0;
     list-style: none;
     padding: 0;
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
 }
 
 .menu li {
-    text-align: right;
+    text-align: left;
     flex-grow: 1;
-}
-
-.menu li:hover {
-    background: rgba(0,0,0,0.3);
+    margin-left: 3rem;
 }
 
 .menu li a {
-    display: block;
-    padding: 15px 10px;
+    display:flex;
+    padding: 15px 5px;
     color: #fff;
     text-decoration: none;
+}
+
+.menu li a:hover {
+    color: #f1a600;
 }
 
 @media (max-width:768px) {
@@ -99,11 +104,16 @@ header label:hover {
 
 .cuadro1 {
     display: flex;
-    background-color: rgba(203, 205, 218, 0.2);
+    background-color:#242635;
     z-index: 11;
     width: 460px;
-    min-height: 500px;
+    min-height: 400px;
     float: right;
+}
+
+.cuadro1 img {
+    margin-left: 7.5rem;
+    margin-top: 3rem;
 }
 
 #nombre h2 {
@@ -111,34 +121,58 @@ header label:hover {
     color: white;
     z-index: 23;
     margin-top: 6rem; 
+    margin-left: 3rem;
 }
 
 .ing > h5 {
     font-size: 30px;
     left: 10px;
     color: white;
+    margin-left: 3rem;
+}
+
+@media (max-width: 480px) {
+    #nombre h2 {
+        font-size: 40px;
+        color: white;
+        z-index: 23;
+        margin-top: 6rem; 
+    }
+    
+    .ing > h5 {
+        font-size: 20px;
+        left: 10px;
+        color: white;
+    }
 }
 
 .color5 {
     color:#f1a600;
+    
+}
+
+#nombre .CV {
+    margin-left: 3rem;
+    margin-top: 3rem;
 }
 
 .iconos{
     align-items: stretch;
     display: inline;
+    margin-left: 3rem;
 }
 
 .cuadro2 {
     display: grid;
     margin-top: 6rem;
-    background-color: rgba(67, 70, 90, 0.2);
+    background-color: #242635;
     color: white;
 
     grid-template-columns: repeat(3, 1fr); 
     grid-template-rows: repeat(3, auto);
     grid-template-areas: "acerca acerca acerca"
                          "p p p"
-                         "logo1 logo1 logo2";
+                         "logo1 . logo2";
 }
 
 .cuadro2 > .acerca {
@@ -157,32 +191,29 @@ header label:hover {
     grid-row: 2/3;
 }
 
-.cuadro2 > .logo1 {
+.cuadro2  .logo1 {
     margin-top: 2rem;
     display: grid;
     grid-column: 1/2;
     grid-row: 3/4;
-    align-items: center;
-    justify-content: center;
     text-align: center;
+    justify-content: center;
+}
+
+.logo1 img {
+    margin-left: 1.5rem;
 }
 
 .cuadro2  .logo2 {
-    margin-left: 3rem;
-    margin-top: 2rem;
-    display: grid;
-    grid-column: 2/3;
-    grid-row: 3/4;
-}
-
-.cuadro2  .logo3 {
-    
     display: grid;
     grid-column: 3/4;
     grid-row: 3/4;
-    align-items: left;
-    justify-content: left;
-    text-align: left;
+    text-align: center;
+    justify-content: center;
+}
+
+.logo2 img {
+    align-items: center;
 }
 
 @media (max-width: 480px ) {
