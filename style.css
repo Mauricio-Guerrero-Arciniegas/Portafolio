@@ -156,18 +156,25 @@ header label:hover {
     margin-top: 3rem;
 }
 
-.iconos{
-    align-items: stretch;
-    display: inline;
+.iconos li {
+    margin-top: 1rem;
+    
+    display: inline-block;
     margin-left: 3rem;
 }
 
+#section2 body {
+    width: 85%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
 .cuadro2 {
     display: grid;
     margin-top: 6rem;
     background-color: #242635;
     color: white;
-
+    
     grid-template-columns: repeat(3, 1fr); 
     grid-template-rows: repeat(3, auto);
     grid-template-areas: "acerca acerca acerca"
@@ -655,6 +662,13 @@ header label:hover {
 .cuadro3 > .mail {
     grid-column: 3/4;
     grid-row: 2/4;
+    text-decoration: none;
+}
+
+.cuadro3 .mail a:visited {
+    
+        color: green;
+      
 }
 
 .academlo > p {
